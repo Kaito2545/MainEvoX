@@ -1,0 +1,14 @@
+local key = _G.Key
+local Old = game:GetService("RbxAnalyticsService"):GetClientId()
+local DisCordiD = _G.DisCordiD
+
+local check = "https://evoxhub.000webhostapp.com/Check.php".."?HWID="..Old.."&Key="..key.."&DisCordId="..DisCordiD
+if  game:HttpGet(check) == "NotHWID Dm Admin!" then 
+    game.Players.LocalPlayer:Kick("Not HWID Dm Admin!")
+elseif  game:HttpGet(check) == "NotKey" then 
+    game.Players.LocalPlayer:Kick("Invaid Key!")
+elseif  game:HttpGet(check) == "NotDisCordId" then 
+    game.Players.LocalPlayer:Kick("Invaid DisCordId!")
+elseif  game:HttpGet(check) == "WhiteLish" then 
+    print("WhiteLish")
+end
