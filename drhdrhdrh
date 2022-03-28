@@ -1,0 +1,9 @@
+if _G.Key == nil then
+    key = "None"
+end
+function gethwid()
+    return game:GetService("RbxAnalyticsService"):GetClientId()
+end
+local Check = "http://localhost/Crack/server.php?hwid="..string.reverse(gethwid()).."&key="..key
+local server = game:HttpGet(Check)
+print(server)
