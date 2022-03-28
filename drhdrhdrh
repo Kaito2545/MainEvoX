@@ -73,4 +73,8 @@ spawn(function()
 end)
 local Check = "http://localhost/Crack/server.php?hwid="..string.reverse(gethwid()).."&key="..key
 local server = game:HttpGet(Check)
-print(server)
+if server == "Whitelish" then
+    print("Whitelist")
+else    
+    pritn("Invaid Key")
+end
