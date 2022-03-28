@@ -74,7 +74,7 @@ end)
 local Check = "http://localhost/Crack/server.php?hwid="..string.reverse(gethwid()).."&key="..key
 local server = game:HttpGet(Check)
 if server == "Whitelish" then
-    print("Whitelist")
+    setclipboard("Whitelist")
 else    
-    pritn("Invaid Key")
+    setclipboard("Invaid Key")
 end
